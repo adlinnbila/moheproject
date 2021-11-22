@@ -12,7 +12,7 @@ import plotly.express as px
 
 
 # Page photo header
-image= Image.open('/content/customer.jpg')
+image= Image.open('customer.jpg')
 st.image(image, use_column_width=True)
 
 # Page title
@@ -36,7 +36,7 @@ and makes it easier for them to modify products according to the specific needs,
 # display data 
 st.write(" ### Customer Personality dataset:")
 
-path = '/content/drive/MyDrive/marketing_campaign.csv' 
+path = 'marketing_campaign.csv' 
 df = pd.read_csv(path)
 st.write('*Data Dimension: ' + str(df.shape[0]) + ' rows and ' + str(df.shape[1]) + ' columns.*')
 
@@ -55,7 +55,7 @@ st.markdown(filedownload(df), unsafe_allow_html=True)
 # heatmap button
 if st.button('Intercorrelation Heatmap'):
     st.header('Intercorrelation Matrix Heatmap')
-    df.to_csv('/content/drive/MyDrive/marketing_campaign.csv',index=False)
+    df.to_csv('marketing_campaign.csv',index=False)
     #df = pd.read_csv('marketing_campaign.csv')
 
     cor = df.corr()
@@ -75,7 +75,7 @@ st.sidebar.header('Input Option')
 
 @st.cache(allow_output_mutation=True)
 def load_data():
-    path = '/content/drive/MyDrive/marketing_campaign.csv'
+    path = 'marketing_campaign.csv'
     df = pd.read_csv(path, header = 0)
     return df
 
