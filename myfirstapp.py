@@ -38,7 +38,7 @@ selected_year = st.sidebar.selectbox('Year', list(reversed(range(1950,2020))))
 # display data 
 st.write(" ### Customer Personality dataset:")
 
-path = '/content/drive/MyDrive/marketing_campaign.csv' 
+path = 'marketing_campaign.csv' 
 df = pd.read_csv(path)
 st.write('*Data Dimension: ' + str(df.shape[0]) + ' rows and ' + str(df.shape[1]) + ' columns.*')
 
