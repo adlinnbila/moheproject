@@ -15,7 +15,7 @@ import plotly.express as px
 
 
 # Page photo header
-image= Image.open('/content/customer.jpg')
+image= Image.open('customer.jpg')
 st.image(image, use_column_width=True)
 
 # Page title
